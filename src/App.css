@@ -1,0 +1,463 @@
+:root {
+  --primary-color: #007BFF;
+  --primary-hover: #0056b3;
+  --secondary-bg-light: #efeff0;
+  --secondary-bg-dark: #2a2a2a;
+  --text-dark: #111;
+  --text-light: #fff;
+  --green-color: #1ec01e;
+  --green-hover: #1d8b1d;
+  --border-radius: 0.65rem;
+  --transition: all 0.25s ease-in-out;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-focus: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+/* ========== BUTTON CSS ========== */
+
+.primary-button {
+  background: linear-gradient(135deg, var(--primary-color), #339DFF);
+  color: var(--text-light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, var(--primary-hover), #267edc);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.3);
+}
+
+.primary-button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.primary-button:disabled,
+.primary-button[disabled] {
+  background: #818791;
+  color: #f1f5f9;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.85;
+}
+
+/* Prevent hover effects when disabled */
+.primary-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Secondary Button - Light Theme */
+.secondary-button-light {
+  background-color: var(--secondary-bg-light);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  align-content: center;
+  justify-content: center;
+}
+
+.secondary-button-light:hover {
+  background-color: #d8dbe7;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.secondary-button-light:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.secondary-button-light:disabled,
+.secondary-button-light[disabled] {
+  background: #4d4e50;
+  color: #a2aab3;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.85;
+}
+
+.secondary-button-light:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+/* Secondary Button - Dark Theme */
+.secondary-button-dark {
+  background-color: var(--secondary-bg-dark);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.secondary-button-dark:hover {
+  background-color: #3a3a3a;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.secondary-button-dark:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.secondary-button-dark:disabled,
+.secondary-button-dark[disabled] {
+  background: #4d4e50;
+  color: #a2aab3;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.85;
+}
+
+/* Prevent hover effects when disabled */
+.secondary-button-dark:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.green-button {
+  background: linear-gradient(135deg, var(--green-color), #1ec01e);
+  color: var(--text-light);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.green-button:hover {
+  background: linear-gradient(135deg, var(--green-hover), #1d8b1d);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.3);
+}
+
+.green-button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.delete-button-light {
+  border: 1px solid #dc3545;
+  background-color: white;
+  color: #dc3545;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-button-light:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.02);
+}
+
+.delete-button-dark {
+  border: 1px solid #dc3545;
+  background-color: red;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-button-dark:hover {
+  background-color: #6a0000;
+  transform: scale(1.02);
+}
+
+/* ========== LEG ========== */
+
+.leg-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: center;
+  margin: 0.5rem 0.5rem;
+}
+
+/* ========================= */
+
+
+
+.text-green {
+  color: green;
+}
+
+.text-light-green {
+  color: lightgreen;
+}
+
+.text-red {
+  color: red;
+}
+
+/* ========== MARGIN CALCULATOR ========== */
+
+.margin-end-panel {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.margin-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.margin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.margin-table th {
+  padding: 12px 10px;
+  font-weight: 600;
+  border-bottom: 1px solid;
+  width: auto;
+}
+
+.margin-table td {
+  padding: 10px;
+  border-bottom: 1px solid;
+  vertical-align: middle;
+  width: auto;
+}
+
+/* Lots buttons */
+.margin-table td button {
+  border: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* %%%%%%%%%%%% WIDTH RESPONSIVE %%%%%%%%%%%% */
+@media (max-width: 1300px) {
+
+  .primary-button,
+  .secondary-button-light,
+  .secondary-button-dark {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  .button-light,
+  .button-dark,
+  .delete-button-light,
+  .delete-button-dark {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+
+  .dropdown-select,
+  .dropdown-input,
+  .dropdown-select-dark,
+  .dropdown-input-dark {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .dropdown-label,
+  .dropdown-label-dark {
+    font-size: 0.85rem;
+  }
+
+  .dropdown-label-row,
+  .dropdown-label-row-dark {
+    font-size: 0.85rem;
+  }
+
+  .dropdown-error,
+  .dropdown-error-dark {
+    font-size: 0.7rem;
+  }
+
+  .leg-container {
+    gap: 10px;
+  }
+
+  .gap-container {
+    top: -1.5rem;
+    right: 0;
+  }
+
+  .dropdown-container,
+  .dropdown-container-dark {
+    width: 6rem;
+  }
+
+  .utility-table-wrapper {
+    flex-direction: row;
+    font-size: small;
+  }
+
+  .detail-table td {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .index-table td {
+    width: 7rem;
+  }
+}
+
+@media (max-width: 950px) {
+
+  .button-light,
+  .button-dark,
+  .delete-button-light,
+  .delete-button-dark {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+  }
+
+  .delete-button-dark,
+  .delete-button-light {
+    width: fit-content;
+  }
+
+  .leg-container {
+    gap: 10px;
+  }
+
+  .gap-container {
+    top: 0rem;
+    right: 0;
+  }
+
+  .detail-table td {
+    padding: 0.1rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .index-table th,
+  .index-table td {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.75rem;
+  }
+
+  .grid-body {
+    width: auto;
+    height: 68vh;
+    margin-top: 5px;
+  }
+
+  .grid-body-fs {
+    width: auto;
+    height: 80vh;
+    margin-top: 0;
+  }
+
+  .utility-table-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bread-crumb {
+    display: none;
+  }
+
+  .margin-detail {
+    flex-direction: column-reverse;
+  }
+
+  .margin-table {
+    font-size: 13px;
+  }
+
+  .margin-table th,
+  .margin-table td {
+    padding: 8px 6px;
+  }
+
+}
+
+/* %%%%%%%%%%%% MOBILE RESPONSIVE %%%%%%%%%%%% */
+@media (max-height: 810px) and (max-width:500px) {
+
+
+  .primary-button,
+  .secondary-button-light,
+  .secondary-button-dark {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .leg-container {
+    gap: 10px;
+    width: 100%;
+    margin: 1rem;
+  }
+
+  .button-dark,
+  .button-light,
+  .delete-button-dark,
+  .delete-button-light {
+    width: 90%;
+    font-size: 0rem;
+  }
+
+
+}
+
+
+
+/* %%%%%%%%%%%% MUI OVERRIDES %%%%%%%%%%%% */
+/* Hide sidebar drawer */
+
+/* margin table*/
+
+/* Responsive */
+@media (max-width: 900px) {}
