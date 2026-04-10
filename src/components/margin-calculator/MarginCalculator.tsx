@@ -286,7 +286,6 @@ export default function MarginCalculator() {
 
                 <Card sx={{
                     flex: 3,
-                    minWidth: 300,
                     p: 3,
                     borderRadius: 3,
                     boxShadow: 3
